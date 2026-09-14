@@ -1,0 +1,23 @@
+[project]
+name = "adaptive-liquidity-stress-engine"
+version = "0.1.0"
+description = "Regime-switching liquidity stress with funding–market feedback spirals."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name = "reallermaker"}]
+dependencies = [
+  "numpy>=1.24",
+  "pandas>=2.0",
+  "scipy>=1.10",
+  "matplotlib>=3.7",
+]
+
+[project.scripts]
+adaptive_liquidity_stress_engine = "adaptive_liquidity_stress_engine.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
